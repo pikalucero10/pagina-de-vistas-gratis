@@ -3,121 +3,100 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Promo Seguidores + Bonus</title>
+  <title>Seguidores Instagram + Bonus</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <style>
-    body {
-      background-color: #111;
-      color: #fff;
-      font-family: 'Segoe UI', sans-serif;
-    }
-
-    .container-custom {
-      max-width: 600px;
-      margin: auto;
-      padding: 8rem 1rem 2rem; /* Agregamos espacio arriba para que el banner no tape */
-    }
-
-    .whatsapp-btn {
-      background-color: #25d366;
-      color: white;
-      border: none;
-      padding: 1.3rem 2rem;
-      font-size: 1.4rem;
-      border-radius: 12px;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 2rem;
-      width: 100%;
-      animation: pulse-glow 1.8s infinite;
-    }
-
-    .whatsapp-btn:hover {
-      background-color: #1ebe5b;
-      color: white;
-    }
-
-    @keyframes pulse-glow {
-      0% { box-shadow: 0 0 10px rgba(37, 211, 102, 0.6); transform: scale(1); }
-      50% { box-shadow: 0 0 20px rgba(37, 211, 102, 1); transform: scale(1.03); }
-      100% { box-shadow: 0 0 10px rgba(37, 211, 102, 0.6); transform: scale(1); }
-    }
-
-    ul.price-list {
-      padding-left: 0;
-      list-style: none;
-      margin-top: 2rem;
-    }
-
-    ul.price-list li {
-      padding: 0.4rem 0;
-      border-bottom: 1px solid #333;
-    }
-
-    .bonus-banner {
-      background-color: #ffc107;
-      color: #111;
-      font-weight: bold;
-      text-align: center;
-      padding: 0.9rem;
-      position: fixed;
-      top: -100px;
-      left: 0;
-      width: 100%;
-      z-index: 9999;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-      transition: top 0.6s ease;
-    }
-
-    .bonus-banner.show {
-      top: 0;
-    }
-
-    @media (max-width: 576px) {
-      h1 { font-size: 1.5rem; }
-      .whatsapp-btn {
-        font-size: 1.2rem;
-        padding: 1rem;
-      }
-    }
-  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" rel="stylesheet" />
 </head>
-<body>
+<body class="bg-dark text-light">
 
-  <!-- Banner animado arriba -->
-  <div id="bonusBanner" class="bonus-banner">
-    🎁 BONUS ACTIVADO: Llevate 1000 likes en tu primer compra
+  <!-- BONUS -->
+  <div class="position-fixed top-0 start-0 w-100 bg-warning text-dark text-center fw-bold py-2 shadow" id="bonusBanner"
+       style="z-index:1050; transform: translateY(-100%); transition: 0.6s;">
+    🎁 BONUS ACTIVADO: Llevate 1000 likes gratis en tu primer compra
   </div>
 
-  <div class="container container-custom text-center" id="contenido">
-    <h1 class="mb-3">🔥 Seguidores</h1>
+  <!-- CONTENIDO -->
+  <div class="container text-center py-5 mt-5 animate__animated animate__fadeIn">
+    <h1 class="mb-3">🔥 Seguidores Instagram</h1>
 
-    <ul class="price-list">
-      <li>📌 100 seguidores – <strong>$1000</strong></li>
-      <li>📌 350 seguidores – <strong>$1300</strong></li>
-      <li>📌 500 seguidores – <strong>$1700</strong></li>
-      <li>📌 1000 seguidores – <strong>$3000</strong></li>
-      <li>📌 1500 seguidores – <strong>$4500</strong></li>
-      <li>📌 3000 seguidores – <strong>$8000</strong></li>
-      <li>📌 5000 seguidores – <strong>$14000</strong></li>
-    </ul>
+    <!-- CONTADOR -->
+    <p id="countdown" class="text-warning fw-bold fs-5 mb-4">⏳ Promo termina en 10:00</p>
 
-    <a class="whatsapp-btn" href="https://wa.me/5492212024243?text=Hola%2C+quiero+comprar+seguidores+y+recibir+los+1000+de+regalo">
-      💬 Quiero Comprar Seguidores
+    <!-- LISTA DE PRECIOS -->
+    <div class="list-group mb-4">
+      <div class="list-group-item list-group-item-dark text-center bg-dark text-light border-secondary">
+        👥 100 seguidores – <strong>$1000</strong>
+      </div>
+      <div class="list-group-item list-group-item-dark text-center bg-dark text-light border-secondary">
+        👥 350 seguidores – <strong>$1300</strong>
+      </div>
+      <div class="list-group-item list-group-item-dark text-center bg-dark text-light border-secondary">
+        👥 500 seguidores – <strong>$1700</strong>
+      </div>
+      <div class="list-group-item list-group-item-dark text-center bg-dark text-light border-secondary">
+        👥 1000 seguidores – <strong>$3000</strong>
+      </div>
+      <div class="list-group-item list-group-item-dark text-center bg-dark text-light border-secondary">
+        👥 1500 seguidores – <strong>$4500</strong>
+      </div>
+      <div class="list-group-item list-group-item-dark text-center bg-dark text-light border-secondary">
+        👥 3000 seguidores – <strong>$8000</strong>
+      </div>
+      <div class="list-group-item list-group-item-dark text-center bg-dark text-light border-secondary">
+        👥 5000 seguidores – <strong>$14000</strong>
+      </div>
+    </div>
+
+    <!-- BOTÓN WHATSAPP -->
+    <a href="https://wa.me/5492212024243?text=Hola,+quiero+comprar+seguidores+y+recibir+los+1000+de+regalo"
+       class="btn btn-success btn-lg w-100 mb-4">
+      💬 Comprar Seguidores Instagram
     </a>
-  </div>
 
+    <!-- PRUEBAS REALES -->
+    <div class="bg-secondary bg-opacity-10 rounded p-3 text-center">
+      <p class="mb-2">
+        🧾 <strong>¿Dudás si es real?</strong><br>
+        Mirá capturas de gente que ya compró:
+      </p>
+      <a href="https://wa.me/p/24032582209685590/5492212024243"
+         target="_blank"
+         class="btn btn-outline-success">
+        ✅ Ver pruebas reales de clientes
+      </a>
+    </div>
+
+    <!-- GARANTÍA -->
+    <p class="text-success fw-semibold mt-4">
+      ✅ Servicio garantizado – Más de 500 pedidos entregados
+    </p>
+
+  <!-- SCRIPTS -->
   <script>
-    // Mostrar banner y hacer scroll al contenido
+    // Mostrar bonus
     setTimeout(() => {
-      const banner = document.getElementById("bonusBanner");
-      banner.classList.add("show");
+      document.getElementById("bonusBanner").style.transform = "translateY(0)";
+    }, 800);
 
-      // Scroll visual suave al contenido
-      setTimeout(() => {
-        document.getElementById("contenido").scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 600);
-    }, 1500);
+    // Contador de 10 minutos
+    let totalSeconds = 10 * 60;
+    const countdown = document.getElementById("countdown");
+
+    const interval = setInterval(() => {
+      const minutes = String(Math.floor(totalSeconds / 60)).padStart(2, '0');
+      const seconds = String(totalSeconds % 60).padStart(2, '0');
+      countdown.textContent = `⏳ Promo termina en ${minutes}:${seconds}`;
+
+      if (totalSeconds <= 0) {
+        clearInterval(interval);
+        countdown.textContent = "⚠️ El tiempo de bonus terminó";
+        countdown.classList.remove("text-warning");
+        countdown.classList.add("text-danger");
+      }
+
+      totalSeconds--;
+    }, 1000);
   </script>
 
 </body>
